@@ -3,6 +3,9 @@ import java.util.List;
 
 public class Shop {
     private static Shop instance;
+
+    private Shop() {}
+    
  
     public static Shop getInstance() {
         if (instance == null) {
@@ -12,28 +15,26 @@ public class Shop {
         return instance;
     }
 
-   private Shop() {
-    
-   }
+   
 
 
 
-    private List workers = new ArrayList();
+    private List<Worker> workers = new ArrayList<>();
 
-    public  void addWorker(Object worker) {
+    public  void addWorker(Worker worker) {
         this.workers.add(worker);
     }
  
     
     public double getTurnover() {
-        var turnOver = 0.0;
-        for (var worker : this.workers) {
+        double turnOver = 0.0;
+        for (Worker worker : this.workers) {
             if (worker instanceof  SalesConsultant); {
-                turnOver += (( SalesConsultant)worker).getMoney();
+                turnOver += ((SalesConsultant)worker).getMoney();
             }
  
             if (worker instanceof  MarketingSpecialist) {
-                turnOver += (( MarketingSpecialist)worker).getBudget();
+                turnOver += ((MarketingSpecialist)worker).getBudget();
             }
         }
  

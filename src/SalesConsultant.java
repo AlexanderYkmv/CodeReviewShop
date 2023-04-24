@@ -1,9 +1,9 @@
 public class SalesConsultant extends Worker {
     
-    private double earnedMoney;
+    private double earnedMoney = 0d;
 
     public void sellProduct(double price) {
-        this.earnedMoney += Math.max(price, 0);
+        this.earnedMoney += price;
     }
 
     public double getMoney() {

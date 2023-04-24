@@ -4,10 +4,12 @@ public class MarketingSpecialist extends Worker {
 
     
     public void spendMoney(double marketingCampaignCost) {
-        this.budget -= Math.max(marketingCampaignCost, 0);
+        this.budget -= marketingCampaignCost;
     }
 
     public double getBudget() {
         return this.budget;
     }
+
+    
 }

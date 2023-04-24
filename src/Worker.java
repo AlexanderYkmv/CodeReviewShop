@@ -1,6 +1,7 @@
-public class Worker {
+public abstract class Worker {
 
     private Shop workingShop;
+    
 
 
     public Worker() {
@@ -8,8 +9,5 @@ public class Worker {
         this.workingShop.addWorker(this);
     }
 
-
-
-   
-
 }
+
